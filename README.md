@@ -9,4 +9,8 @@ This application was written in Java with the help of Tesseract engine.
 
 The project was developed in Polytechnic Institute of Setúbal, Superior School of Technology, Portugal.
 
-Currently this project is in Portuguese only, however shortly it will be translated to another languages like English and Spanish, is just a matter of free time.
+
+Wiki (Portuguese): https://github.com/jmachete/ENA-OCR/wiki/Manual-de-Utilizador
+
+![ title ](https://raw.github.com/jmachete/ENA-OCR/master/splash.png)
+
