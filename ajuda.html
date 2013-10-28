@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EnaOCR - Manual Utilizador</title>
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* É recomendável zerar a margem e o preenchimento do elemento body para acomodar os diferentes padrões de navegador */
+	padding: 0;
+	text-align: center; /* Isso centraliza o contêiner em navegadores IE 5*. O texto é então definido como o padrão de alinhamento à esquerda no seletor #container */
+	color: #000000;
+	background-color: #FFF;
+}
+
+/* Dicas para layouts elásticos
+1. Como o tamanho total dos layouts elásticos baseia-se no tamanho das fontes padrão do usuário, eles são mais imprevisíveis. Usados corretamente, eles também são mais acessíveis para aqueles que precisam de fontes de tamanho maior, pois o comprimento da linha permanece proporcional.
+2. O tamanho dos divs deste layout baseia-se no tamanho de fonte 100% no elemento body. Se você reduzir o tamanho total do texto usando o tamanho de fonte 80% no elemento body ou em #container, lembre-se de que o tamanho de todo o layout será reduzido proporcionalmente. Convém aumentar as larguras dos vários divs para compensar isso.
+3. Se o tamanho da fonte for alterado em proporções diferentes em cada div, e não no design global (p.ex.: o tamanho de fonte 70% é atribuído a #sidebar1 e o tamanho de fonte 85% é atribuído a #mainContent), o tamanho total de cada div será alterado proporcionalmente. Convém ajustar esses divs com base no tamanho de fonte final.
+*/
+.twoColElsLt #container {
+	background: #FFFFFF;
+	margin: 0 auto; /* As margens automáticas (juntamente com a largura) centralizam a página */
+	border: 1px solid #000000;
+	text-align: left; /* Isso substitui text-align: center do elemento body. */
+} 
+
+/* Dicas para a barra lateral 1:
+1. Lembre-se de que, se você definir um valor de tamanho de fonte neste div, a largura geral do div será ajustada de acordo.
+2. Como estamos trabalhando em espaços "m", é melhor não usar o preenchimento na própria barra lateral. Ele será adicionado à largura para navegadores compatíveis com padrões, criando uma largura real desconhecida. 
+3. Para criar o espaço entre a lateral do div e os elementos nele contidos, insira margens esquerda e direita nesses elementos, assim como na regra ".twoColElsLt #sidebar1 p".
+*/
+.twoColElsLt #sidebar1 {
+	float: left;
+	width: 12em; /* Como esse elemento é flutuante, uma largura deve ser fornecida */
+	background: #EBEBEB; /* A cor do plano de fundo será exibida para o comprimento do conteúdo na coluna, mas não mais do que isso */
+	padding: 15px 0;
+}
+.twoColElsLt #sidebar1 h3, .twoColElsLt #sidebar1 p {
+	margin-left: 10px; /* As margens direita e esquerda devem ser fornecidas para cada elemento que será colocado nas colunas laterais */
+	margin-right: 10px;
+}
+
+/* Dicas para mainContent:
+1. Se você atribuir a este div #mainContent um valor de tamanho de fonte diferente do valor do div #sidebar1, as margens do div #mainContent se basearão em seu respectivo tamanho de fonte e a largura do div #sidebar1 se baseará em seu respectivo tamanho de fonte. Convém ajustar os valores desses divs.
+2. O espaço entre o mainContent e sidebar1 é criado com a margem esquerda do div mainContent. Não importa quanto conteúdo exista no div da barra lateral 1, o espaço da coluna permanecerá igual. Você pode remover a margem esquerda se desejar que o texto do div #mainContent preencha o espaço #sidebar1 quando o conteúdo em #sidebar1 terminar.
+3. Para evitar que a flutuação se solte, talvez seja necessário testá-la para determinar o tamanho máximo aproximado da imagem/elemento, pois esse layout baseia-se no tamanho da fonte do usuário combinado com os valores definidos por você. Contudo, se o tamanho da fonte do navegador do usuário estiver definido com um tamanho menor do que o normal, menos espaço estará disponível no div #mainContent do que o exibido no teste.
+4. No Comentário Condicional do Internet Explorer abaixo, a propriedade zoom é usada para fornecer "hasLayout" de mainContent." Isso evita diversos erros específicos do IE.
+*/
+.twoColElsLt #mainContent {
+ 	margin: 0 1.5em 0 13em; /* A margem direita pode ser fornecida em espaços "m" ou pixels. Isso cria o espaço abaixo e à direita da página. */
+} 
+
+/* Diversas classes para reutilização */
+.fltrt { /* Esta classe é usada para flutuar um elemento à direita na página. O elemento flutuante deve preceder o elemento e estar próximo dele na página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Esta classe é usada para flutuar um elemento à esquerda em sua página */
+	float: left;
+	margin-right: 8px;
+}
+.tituloMenu {
+	color: #F39;
+	font-size: 24px;
+}
+.clearfloat { /* Esta classe deve ser colocada em um elemento div ou break e deve ser o último elemento antes do fechamento de um contêiner que deve conter uma flutuação completamente */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.titulo {
+	color: #09C;
+	font-size: 36px;
+	font-style: normal;
+}
+.subTitulo {
+	color: #F90;
+	font-size: 30px;
+}
+.terceiroTitulo {
+	font-size: 18px;
+	color: #093;
+}
+.salientar {
+	color: #F39;
+	font-size: 18px;
+}
+.links {
+	color: #0C3;
+	font-size: 16px;
+	font-style: normal;
+	list-style-type: none;
+	cursor: auto;
+	filter: Xray;
+	line-height: normal;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* Coloca correções de CSS para todas as versões do IE neste comentário condicional */
+.twoColElsLt #sidebar1 { padding-top: 30px; }
+.twoColElsLt #mainContent { zoom: 1; padding-top: 15px; }
+/* A propriedade zoom proprietária acima dá ao IE o hasLayout necessário para evitar diversos erros */
+</style>
+<![endif]--></head>
+
+<body class="twoColElsLt">
+
+<div id="container">
+  <div id="sidebar1">
+<center><h3 class="tituloMenu"><img src="images/logo.png" width="100" height="100" border="0" /></h3>
+</center>
+    <p class="links"><a href="#_oqueé">O que é EnaOCR?</a></p>
+<p class="links"><a href="#_introducao">Introdução</a></p>
+    <p class="links"><a href="#_janelaInicial">Janela Inicial</a></p>
+    <p class="links"><a href="#_ficheirosTeste">Ficheiros de Teste</a></p>
+    <p class="links"><a href="#_oQueSaoZonas">O que são Zonas?</a></p>
+    <p class="links"><a href="#_DefinirZonas">Definir Zonas</a></p>
+    <p class="links"><a href="#_editarZonas">Editar Zonas</a></p>
+    <p class="links"><a href="#_processarFicheiros">Processar Ficheiros</a></p>
+    <p class="links"><a href="#_VerificarResultado">Verificar Resultado</a></p>
+    <p class="links"><a href="#_ExportarResultado">Exportar Resultados</a></p>
+    <p class="links"><a href="#_opcoes">Opções</a></p>
+  <!-- end #sidebar1 --></div>
+  <div id="mainContent">
+    <center><h1 class="titulo"><strong>Manual de Utilizador</strong></h1>
+    </center>
+    <h1><a name="_oqueé" class="subTitulo" id="_Toc243640902">O que é EnaOCR?</a></h1>
+    <p>EnaOCR é um programa de desktop  que permite converter múltiplos ficheiros de imagem em texto ASCII. É possível  a definição das zonas da imagem a processar.<br />
+      O Resultado poderá ser guardado  em simples texto, separado por vírgulas ou XML.</p>
+    <h1><a name="_introducao" class="subTitulo" id="_introducao">Introdução</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+    <p>Se tiver múltiplos ficheiros de imagem dentro uma pasta, por  exemplo, ficheiros TIF, e essas imagens são do mesmo formato, então é possível  extrair o texto de uma área pré-definida, de todas as imagens que se encontram  no interior dessa pasta, e armazenar os resultados, num ficheiros de texto,  delimitado por uma vírgula para cada registo ou num ficheiro XML.</p>
+    <p><strong class="salientar">Existem três passos para o processamento das imagens</strong><br />
+    </p>
+    <p>
+      <strong class="terceiroTitulo">Primeiro Passo:</strong> <u>Definir as zonas de uma imagem a  processar.</u> <br />
+      Uma zona é uma área da imagem que você deseja de converter em  texto. <br />
+      Para definir uma zona, é necessário seleccionar uma imagem que é a  representante de todas as imagens contidas nessa pasta e definir as zonas a  serem processadas. <br />
+      Por exemplo, suponha que você tem mil facturas de clientes numa  pasta em formato TIF. Suponha que cada factura contém um nome, a data da compra  e um número de cliente. <br />
+    Se esses valores foram todos localizados na mesma área da factura  em todos os ficheiros a serem processados, é extremamente fácil obter o texto  de cada um dos documentos. </p>
+    <p><strong class="terceiroTitulo">Segundo Passo: </strong><u>Processar todos os ficheiros de imagem  dentro de uma pasta</u> <br />
+      Após as regiões terem sido definidas, pode-se então seleccionar  uma pasta que contenha ficheiros de imagem, e o EnaOCR irá processar todos os  ficheiros, convertendo todas as zonas anteriormente definidas em texto. <br />
+      Depois dos seus ficheiros de imagem terem sido convertidos para  texto, é possível corrigir esses mesmos resultados e verificar a sua veracidade.    </p>
+    <p><strong class="terceiroTitulo">Terceiro Passo:</strong> <u>Guardar resultados em ficheiro </u><br />
+    Uma vez estando satisfeito(a) com a precisão dos seus resultados,  pode armazenar os mesmo num ficheiro de dados. É oferecido dois meios para  exportar seus dados para o ficheiro de dados, Texto Delimitado ou ficheiro  XML.</p>
+    <h1><a name="_janelaInicial" class="subTitulo" id="_janelaInicial">Janela Inicial</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p><img src="images/image003.png" width="661" height="518" /></p>
+<h1><a name="_ficheirosTeste" class="subTitulo" id="_ficheirosTeste">Ficheiros de Teste</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Ficheiros para teste foram incluídos nesta instalação para  testes do próprio utilizador.</p>
+<p><br />
+  Esses ficheiros encontram-se na pasta <strong><em>EnaOCR\samples</em></strong><br />
+  samples\Document1.TIF<br />
+  samples\  Document 2.TIF<br />
+  samples\  Document 3.TIF<br />
+  samples\  Document 4.TIF</p>
+<h1><a name="_oQueSaoZonas" class="subTitulo" id="_oQueSaoZonas">O que são Zonas?</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>EnaOCR permite converter áreas seleccionadas de uma imagem para texto. Você define  essas áreas, da qual são chamadas de zonas. <br />
+  Usando uma imagem representativa do documento  como um modelo, imagem de exemplo, você pode seleccionar uma ou mais zonas a  serem processadas. <br />
+  Cada rectângulo indica uma zona definida  por si. Para definir uma zona pode digitar manualmente os valores para a posição(X,  Y) e respectiva Largura / Altura nas caixas de texto apresentadas para o efeito,  ou simplesmente arrastando um pequeno rectângulo usando o rato para desenhar  uma área de processamento sobre a imagem.</p>
+<p><img src="images/image004.png" width="417" height="378" /></p>
+<h1><a name="_DefinirZonas" class="subTitulo" id="_DefinirZonas">Definir Zonas</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Para iniciar o processo de  definição de zonas, seleccione o botão <strong>Definir  Zonas</strong> na barra de ferramentas que se encontra no topo da aplicação.</p>
+<p><img src="images/image005.png" width="716" height="506" /></p>
+<p>Poderá criar um determinado grupo  de zonas a serem processadas, para isso basta clicar no botão <strong>adicionar <img src="images/image006.png" width="94" height="19" /></strong><strong> </strong> e <strong>escrever o nome do respectivo grupo</strong> na  caixa de texto indicada.<br />
+Caso queira remover a zona basta  clicar no botão <strong>remover</strong> <img src="images/image007.png" width="95" height="21" /></p>
+<p>Uma vez criado o tipo de zona  “grupo”, poderá da mesma maneira que a anterior, criar várias zonas a serem  processadas.</p>
+<p><img src="images/image008.png" width="343" height="372" /></p>
+<p>Não se esqueça que uma vez  terminado o processo de criação de zonas, deverá seleccionar o botão <strong>gravar</strong>, a fim de guardar todas as suas  zonas na base dados do programa, para mais tarde não ter que perder tempo na  definição de zonas.</p>
+<p><br />
+  O  estado de gravação é exibido por uma barra de progresso na parte inferior da  janela. &nbsp;<img src="images/image009.png" width="179" height="26" /><br />
+</p>
+<h1><a name="_editarZonas" class="subTitulo" id="_editarZonas">Editar Zonas</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Uma vez definidas as zonas,  poderá <strong>seleccionar a zona a editar</strong> e <strong>arrastar com o rato um rectângulo</strong> e,  redor dos caracteres que deseja capturar, caso prefira fazer manualmente,  poderá colocar as respectivas coordenadas nas caixas de texto indicadas.</p>
+<p><img src="images/image010.png" width="750" height="389" /></p>
+<p>Não se esqueça de <strong>gravar  as alterações feitas</strong> na base dados.</p>
+<h1><a name="_processarFicheiros" class="subTitulo" id="_processarFicheiros">Processar Ficheiros</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Para iniciar a fase de Processamento  Ficheiros, seleccione o botão <strong>Processamento  de Ficheiros</strong> na barra de ferramentas que se encontra no topo da aplicação.</p>
+<p><br />
+  EnaOCR converte múltiplos ficheiros de  imagem em texto ASCII. Para  processar todos os ficheiros dentro de uma pasta, terá seleccionar que tipo de  zona pretende. Também será necessário indicar uma pasta da qual contenha  imagens do tipo TIF, BMP, JPG, GIF, PNG.&nbsp;</p>
+<p><br />
+  Caso não seja identificado nenhum  tipo de imagem no interior da pasta, é indicado uma barra vermelha.</p>
+<p><img src="images/image011.png" width="702" height="56" /></p>
+<p>Caso exista imagens, é mostrada uma barra verde,  seguida do endereço da pasta</p>
+<p><img src="images/image012.png" width="701" height="55" /></p>
+<p>Uma  vez seleccionada a pasta de input, é necessário seleccionar o botão <strong>processar ficheiros </strong><img src="images/image013.png" width="125" height="26" /></p>
+<p>Os  ficheiros de imagem reconhecidos pelo programa serão exibidos na lista do lado  esquerdo da janela. Os resultados obtidos serão exibidos na lista do lado  direito da janela em tempo real. </p>
+<p><img src="images/image014.png" width="668" height="367" /></p>
+<p>O  estado do processamento é exibido por uma barra de progresso na parte inferior  da janela <img src="images/image009.png" width="179" height="26" /></p>
+<h1><a name="_VerificarResultado" class="subTitulo" id="_VerificarResultado">Verificar Resultado</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Uma vez processados os ficheiros,  o resultado é mostrado no lado direito da janela.<br />
+  Cabe ao utilizador fazer a  verificação dos dados, caso veja alguma irregularidade, apenas terá de clicar  duas vezes sobre o campo a alterar, e modificar o mesmo. </p>
+<p><img src="images/image015.png" width="417" height="82" /></p>
+<h1><a name="_ExportarResultado" class="subTitulo" id="_ExportarResultado">Exportar Resultados</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Para iniciar a fase de exportação  resultados, seleccione o botão <strong>Exportar  Resultados</strong> na barra de ferramentas que se encontra no topo da aplicação.</p>
+<p>
+  Inicialmente poderá definir em  exportar os resultados para texto ou para XML.</p>
+<p>
+  Para dar inicio ao processamento  dos dados seleccione o botão <strong>Processar  Exportação </strong>seguido da opção de output, neste caso escolhemos XML.</p>
+<p><img src="images/image016.png" width="781" height="672" /></p>
+<p>Se pretender integrar os dados  adquiridos com o sistema de informação Web da ENA, poderá alterar os nomes das  zonas conforme a base dados da ENA, a fim de possibilitar a inserção dos  resultados de forma rápida e simples. </p>
+<p>Para isso deverá indicar o tipo  de factura seguido da opção de cada zona, e seleccionar o botão alterar XML</p>
+<p><img src="images/image017.png" width="226" height="166" /></p>
+<p>Uma vez alterado os elementos dos  XML, podemos guardar o ficheiro gerado no nosso computador.</p>
+<p>Caso tenha seleccionado a <strong>opção texto</strong>, terá a possibilidade de  definir qual o carácter de separação dos dados.</p>
+<p><br />
+  <img src="images/exportaçãoTexto.PNG" width="280" height="248" /></p>
+<p>Repare que  cada zona está separada por vírgula</p>
+<h1><a name="_opcoes" class="subTitulo" id="_opcoes">Opções</a> <a href="#"><img src="images/Arrow-Up.png" alt="saltar para o topo" width="36" height="36" border="0" /></a></h1>
+<p>Toda a aplicação utiliza o  sistema de reconhecimento de caracteres Tesseract. Para que a aplicação não  esteja restrita a futuros desenvolvimentos deste sistema é possível indicar a pasta  de destino da mesma.</p>
+<p><img src="images/image018.png" width="333" height="115" /></p>
+<p>Devido a existirem milhares de  caracteres diferentes por todo o mundo, é necessário definir qual o idioma do  texto a processar, actualmente a aplicação reconhece caracteres portugueses e  ingleses através da norma de codificação ISO639-3.</p>
+<p><img src="images/image019.png" width="340" height="112" /></p>
+<p>Caso seja necessária ajuda na forma de utilização da  aplicação, poderá recorrer á mesma através do menu Ajuda. </p>
+<p><img src="images/image020.png" width="98" height="63" /></p>
+<p>O manual de Utilizador será mostrado no ecrã através do seu  browser predefinido.</p>
+<p>&nbsp;</p>
+</div></div>
+</body>
+</html>

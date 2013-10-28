@@ -1,0 +1,52 @@
+<EnaOCR>  
+   <tipo nomeTipo="Factura Simples">    
+      <nome1>consumoEstimadoDataInicio</nome1>   
+	  <nome2>consumoEstimadoDataFim</nome2>   
+	  <nome3>consumoEstimadoQuantidade</nome3>   
+	  <nome4>consumoEstimadoPrecoUnitario</nome4>   
+      <nome5>consumoMedidoDataInicio</nome5>   
+	  <nome6>consumoMedidoDataFim</nome6>   
+	  <nome7>consumoMedidoQuantidade</nome7>   
+	  <nome8>consumoMedidoPrecoUnitario</nome8>  
+      <nome9>consumoFacturadoDataInicio</nome9>   
+	  <nome10>consumoFacturadoDataFim</nome10>   
+	  <nome11>consumoFacturadoQuantidade</nome11>   
+	  <nome12>consumoFacturadoPrecoUnitario</nome12>  
+      <nome13>potenciaContratadaSValorPotencia</nome13>   
+	  <nome14>potenciaContratadaSQuantidade</nome14>   
+	  <nome15>potenciaContratadaSPrecoUnitario</nome15>   
+   </tipo>  
+   <tipo nomeTipo="Factura Composta">     
+      <nome1>energiaReactivaVazioDataInicio</nome1>   
+	  <nome2>energiaReactivaVazioDataFim</nome2>   
+	  <nome3>energiaReactivaVazioQuantidade</nome3>   
+	  <nome4>energiaReactivaVazioPrecoUnitario</nome4>   
+      <nome5>energiaReactivaVazioFactor</nome5>   
+	  <nome6>termoTarifarioFixoDataInicio</nome6>   
+	  <nome7>termoTarifarioFixoDataFim</nome7>   
+	  <nome8>termoTarifarioFixoQuantidade</nome8>  
+      <nome9>termoTarifarioFixoPrecoUnitario</nome9>   
+	  <nome10>termoTarifarioFixoFactor</nome10>   
+	  <nome11>energiaActivaCheiasDataInicio</nome11>   
+	  <nome12>energiaActivaCheiasDataFim</nome12>  
+      <nome13>energiaActivaCheiasQuantidade</nome13>   
+	  <nome14>energiaActivaCheiasPrecoUnitario</nome14>   
+	  <nome15>energiaActivaCheiasFactor</nome15> 
+      <nome16>energiaActivaVazioDataInicio</nome16>   
+	  <nome17>energiaActivaVazioDataFim</nome17>   
+	  <nome18>energiaActivaVazioQuantidade</nome18>   
+	  <nome19>energiaActivaVazioPrecoUnitario</nome19>   
+      <nome20>energiaActivaVazioFactor</nome20>   
+	  <nome21>energiaActivaPontaDataInicio</nome21>   
+	  <nome22>energiaActivaPontaDataFim</nome22>   
+	  <nome23>energiaActivaPontaQuantidade</nome23>  
+      <nome24>energiaActivaPontaPrecoUnitario</nome24>   
+	  <nome25>energiaActivaPontaFactor</nome25>   
+	  <nome26>potenciaHorasPontaQuantidade</nome26>   
+	  <nome27>potenciaHorasPontaFactor</nome27>  
+      <nome28>potenciaHorasPontaPrecoUnitario</nome28>   
+	  <nome29>potenciaContratadaCQuantidade</nome29>   
+	  <nome30>potenciaContratadaCFactor</nome30> 	
+	  <nome31>potenciaContratadaCPrecoUnitario</nome31> 	 	  	  
+   </tipo>     
+</EnaOCR>  
